@@ -37,7 +37,7 @@ terminal-border: "0"
   # EN
   text = "Booting in %d seconds"
   # ES
-  # text = "Arranque en% d segundos"
+  # text = "Arranque en %d segundos"
   # FR
   # text = "Démarrage automatique dans %d secondes"
   # NO
@@ -48,6 +48,8 @@ terminal-border: "0"
   # text = "Загрузка выбранного пункта через %d сек."
   # UA
   # text = "Автоматичне завантаження розпочнеться через %d сек."
+  # IT
+  # text = "Avvio in %d secondi"
   # zh_CN
   # text = "在 %d 内启动"
   color = "#777777"
@@ -76,6 +78,8 @@ terminal-border: "0"
   # text = "Используйте клавиши ↑ и ↓ для изменения выбора, Enter для подтверждения"
   # UA
   # text = "Використовуйте ↑ та ↓ для вибору, Enter для підтвердження"
+  # IT
+  # text = "Usa i tasti ↑ e ↓ per cambiare la selezione, premi Invio ↲ per confermare"
   # zh_CN
   # text = "使用 ↑ 和 ↓ 键移动选择条，Enter 键确认"
   color = "#777777"
