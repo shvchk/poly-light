@@ -12,6 +12,7 @@ declare -A LANGS=(
     [English]=EN
     [French]=FR
     [German]=DE
+    [Italian]=IT
     [Norwegian]=NO
     [Portuguese]=PT
     [Russian]=RU
