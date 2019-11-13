@@ -66,7 +66,7 @@ if [ -e /etc/os-release ]; then
 
         GRUB_DIR='grub2'
         if [ "$UEFI_MODE" == "YES" ]; then
-             UPDATE_GRUB='grub2-mkconfig -o /boot/efi/EFI/$ID/grub.cfg'
+             UPDATE_GRUB="grub2-mkconfig -o /boot/efi/EFI/$ID/grub.cfg"
         else
              UPDATE_GRUB='grub2-mkconfig -o /boot/grub2/grub.cfg'
         fi
