@@ -41,6 +41,12 @@ done < /dev/tty
 GRUB_DIR='grub'
 UPDATE_GRUB=''
 
+# Detect bootloader
+if [ -d "/boot/efi" ]; then
+    echo "The current bootloader is UEFI"
+    UEFI_MODE=YES
+fi
+
 if [ -e /etc/os-release ]; then
 
     source /etc/os-release
@@ -59,7 +65,11 @@ if [ -e /etc/os-release ]; then
             "$ID_LIKE" =~ (fedora|rhel|suse) ]]; then
 
         GRUB_DIR='grub2'
-        UPDATE_GRUB='grub2-mkconfig -o /boot/grub2/grub.cfg'
+        if [ "$UEFI_MODE" == "YES" ]; then
+             UPDATE_GRUB='grub2-mkconfig -o /boot/efi/EFI/$ID/grub.cfg'
+        else
+             UPDATE_GRUB='grub2-mkconfig -o /boot/grub2/grub.cfg'
+        fi
     fi
 fi
 
