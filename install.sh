@@ -113,7 +113,16 @@ which xrandr 2>&1 >/dev/null
 
 if [ $? == 0 ];
 then
-    RES=`xrandr | grep "connected primary" | awk '{print $4}'|sed 's#+.+.$##g'`
+    # Detect old primary display resolution item
+    OLD_RES=`cat /etc/default/grub | grep "GRUB_GFXMODE="`
+
+    if [ $OLD_RES != "" ];
+    then
+        echo 'Delete old GRUB resolution entries'
+        sed -i "/^$OLD_RES/d" /etc/default/grub
+    fi
+    
+    RES=`xrandr | grep "connected primary" | awk '{print $4}' | sed 's#+.+.$##g'`
     echo "GRUB_GFXMODE=$RES" | sudo tee -a /etc/default/grub
 fi
 
