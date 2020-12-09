@@ -108,6 +108,15 @@ echo | sudo tee -a /etc/default/grub
 echo 'Adding theme to GRUB config'
 echo "GRUB_THEME=/boot/${GRUB_DIR}/themes/${THEME}/theme.txt" | sudo tee -a /etc/default/grub
 
+# Detect primary display resolution
+which xrandr 2>&1 >/dev/null
+
+if [ $? == 0 ];
+then
+    RES=`xrandr | grep "connected primary" | awk '{print $4}'|sed 's#+.+.$##g'`
+    echo "GRUB_GFXMODE=$RES" | sudo tee -a /etc/default/grub
+fi
+
 echo 'Removing theme installation files'
 rm -rf ${THEME}.zip ${THEME}-master
 
