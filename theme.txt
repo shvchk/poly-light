@@ -40,8 +40,12 @@ terminal-border: "0"
   # text = "Arranque en %d segundos"
   # FR
   # text = "Démarrage automatique dans %d secondes"
+  # HU
+  # text = "A kijelölt bejegyzés automatikusan elindul %d másodperc múlva."
   # IT
   # text = "Avvio in %d secondi"
+  # LV
+  # text = "Inicializē pēc %d sekundēm."
   # NO
   # text = "Starter om %d sekunder"
   # PT
@@ -60,7 +64,7 @@ terminal-border: "0"
   font = "Unifont Regular 18"
 }
 
-# Navigation keys hint 
+# Navigation keys hint
 + label {
   left = 0
   top = 100%-24
@@ -74,8 +78,12 @@ terminal-border: "0"
   # text = "Use las teclas ↑ y ↓ para cambiar la selección, Enter para confirmar"
   # FR
   # text = "Choisissez le système avec les flèches du clavier (↑ et ↓), puis validez avec la touche Enter (↲)"
+  # HU
+  # text = "A kiemelt elem kijelöléséhez használja a(z) ↑ és ↓ billentyűket!"
   # IT
   # text = "Usa i tasti ↑ e ↓ per cambiare la selezione, premi Invio ↲ per confermare"
+  # LV
+  # text = "Izmantojiet ↑ un ↓ bultiņas, lai mainītu izvēli, Enter ↲, lai apstiprinātu."
   # NO
   # text = "Bruk ↑ og ↓ for å endre menyvalg, velg med Enter"
   # PT
